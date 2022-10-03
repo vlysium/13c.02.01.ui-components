@@ -1,0 +1,81 @@
+/* #region global */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* #endregion global */
+
+/* #region navigation */
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1068px;
+  margin-inline: auto;
+  padding: 12px;
+}
+
+#logo em {
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.5rem;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: space-between;
+  width: 300px;
+  margin-inline: auto;
+  align-items: center;
+  gap: 8px;
+  padding: 0 8px;
+}
+
+li {
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+nav input {
+  border: none;
+  padding: 8px 32px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  background-color: orangered;
+  color: white;
+}
+
+/* #endregion navigation */
+
+/* #region splash */
+
+header section {
+  border-top: 2px solid darkgray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  align-items: center;
+  height: 30vh;
+}
+
+header h1 {
+  font-size: 3rem;
+}
+
+header p {
+  font-size: 1.25rem;
+  max-width: 35ch;
+  color: #333333;
+  text-align: center;
+}
+
+/* #endregion splash */
