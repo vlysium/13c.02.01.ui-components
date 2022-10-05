@@ -8,9 +8,62 @@
   box-sizing: border-box;
 }
 
+html {
+  background-color: #f0f0f0;
+  scrollbar-gutter: stable;
+}
+
+section {
+  max-width: 1068px;
+  margin-inline: auto;
+  padding-inline: 12px;
+  margin-bottom: 40px;
+}
+
+input {
+  cursor: pointer;
+}
+
 /* #endregion global */
 
+/* #region fonts */
+
+html,
+input {
+  font-family: "Nunito", sans-serif;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  padding-bottom: 1.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding-bottom: 0.25rem;
+}
+
+p {
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+/* #endregion fonts */
+
 /* #region navigation */
+
+header > div {
+  background-color: white;
+  border-bottom: 1px solid darkgray;
+}
 
 nav {
   display: flex;
@@ -46,11 +99,12 @@ li {
 
 nav input {
   border: none;
-  padding: 8px 32px;
+  padding: 6px 36px;
   border-radius: 6px;
   text-transform: uppercase;
-  background-color: orangered;
+  background-color: hsl(16, 70%, 50%);
   color: white;
+  font-weight: 500;
 }
 
 /* #endregion navigation */
@@ -58,17 +112,12 @@ nav input {
 /* #region splash */
 
 header section {
-  border-top: 2px solid darkgray;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 8px;
   align-items: center;
-  height: 30vh;
-}
-
-header h1 {
-  font-size: 3rem;
+  min-height: calc(20vh + 240px);
 }
 
 header p {
@@ -79,3 +128,97 @@ header p {
 }
 
 /* #endregion splash */
+
+/* #region selection */
+
+form {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 24px;
+}
+
+fieldset {
+  background-color: white;
+  border-radius: 8px;
+  border: 2px solid darkgray;
+  padding: 16px;
+  height: max-content;
+}
+
+legend {
+  float: left;
+  width: 100%;
+  padding-bottom: 8px;
+  font-size: 1.5rem;
+}
+
+label {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 200;
+  width: 100%;
+}
+
+label + label {
+  margin-top: 8px;
+}
+
+/* #endregion selection */
+
+/* #region cards */
+
+#cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 24px;
+}
+
+.card {
+  overflow: hidden;
+  border-radius: 6px;
+  border: 1px solid darkgray;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.card > *:not(.card_media) {
+  padding-inline: 16px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 5 / 4;
+  object-fit: cover;
+  padding-bottom: 16px;
+}
+
+.flex-row {
+  margin-top: auto;
+  padding-block: 24px 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+input[type="button"] {
+  border: none;
+  padding: 12px 32px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+input[type="button"][value="Learn more"] {
+  border: 2px solid rgb(24, 24, 24);
+  color: rgb(24, 24, 24);
+  background-color: transparent;
+}
+
+input[type="button"][value="Buy pot"] {
+  background-color: rgb(24, 24, 24);
+  color: white;
+}
+
+/* #endregion cards */
